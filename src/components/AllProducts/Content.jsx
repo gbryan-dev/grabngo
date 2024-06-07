@@ -7,11 +7,12 @@ import apiEndpoints from '../api_endpoints';
 import ProductList from './ProductList';
 
 function Content() {
-
+// State variables para sa categories, product count
   const [categories, setCategories] = useState([]);
   const [countNew, setCountNew] = useState([]);
   const [countSale, setCountSale] = useState([]);
-  
+
+  // Pag-fetch sa mga categories sa product sa pag-mount sa component
   useEffect(() => {
     axios.get(apiEndpoints.find(endpoint => endpoint.name === 'get_categories').url)
       .then(response => {
@@ -40,11 +41,13 @@ function Content() {
       });
   }, []);
   
+    // Calculate sa total counts for products and sales
   const totalProductCount = categories.reduce((acc, curr) => acc + Number(curr.count), 0);
   const totalSaleCount = countSale.reduce((acc, curr) => acc + Number(curr.count), 0);
   const totalNewCount = countNew.reduce((acc, curr) => acc + Number(curr.count), 0);
   
 
+  // Rendering the component
   return (
     <>
       <div id="sns_content" className="wrap layout">
