@@ -1,0 +1,26 @@
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.bannerhead { margin: 0px; margin-top: -15px; margin-bottom: 20px; width: 100%; height: auto;
+     display: flex; flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 30px;
+}
+
+.searchinput { 
+    padding: 10px;
+    border: 2px solid #222222;
+    border-radius: 5px;
+    width: 70%;
+    text-align: center;
+    
+}
