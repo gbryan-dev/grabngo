@@ -1,0 +1,17 @@
+.forImage img { height: 100%; width: 100%;}
+
+.item-row {
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+
+  .item { margin: 20px; }
+  .prd { display: flex;}
+  
+
+  @media (max-width: 768px) {
+    .item-row {
+      display: block; /* Change to whatever display value you need for mobile */
+    }
+  }
